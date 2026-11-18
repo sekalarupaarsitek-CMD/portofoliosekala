@@ -199,7 +199,7 @@ Selesaikan berurutan. Setiap fase punya kriteria selesai yang harus dites pemili
 - [x] Teks "Tentang" + foto profil (teks filosofi sudah, tinggal foto profil asli)
 - [x] Nomor WhatsApp (`087857523074` / `6287857523074`), email (`sekalarupa.arsitek@gmail.com`), lokasi (`Cililin, Bandung Barat`), jam kerja
 - [x] Tautan sosial media (Instagram: `https://www.instagram.com/sekalarupa.arsitek/`, TikTok: `https://www.tiktok.com/@sekalarupa`, YouTube: `https://www.youtube.com/@SekalarupaArsitek`)
-- [ ] Pilihan nama domain
+- [x] Pilihan nama domain (`https://sekalarupaarsitek.com`)
 
 ## 12. Cara Memulai Sesi dengan Agent
 

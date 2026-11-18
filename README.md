@@ -24,4 +24,4 @@ Website resmi **Sekalarupa Studio Arsitek** (*Tatar Rupa Mawa Bagja*) — jasa d
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `NEXT_PUBLIC_WHATSAPP_NUMBER`
-- `NEXT_PUBLIC_SITE_URL` *(URL domain online Anda, misal `https://sekalarupa.com`)*
+- `NEXT_PUBLIC_SITE_URL` *(URL domain online Anda, misal `https://sekalarupaarsitek.com`)*

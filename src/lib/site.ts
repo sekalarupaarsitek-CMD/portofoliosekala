@@ -18,7 +18,7 @@ function normalizeWhatsApp(raw?: string): string {
 }
 
 export const siteConfig = {
-  siteUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://sekalarupa.com").replace(/\/$/, ""),
+  siteUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://sekalarupaarsitek.com").replace(/\/$/, ""),
   name: "Sekalarupa",
   subTitle: "Studio Arsitektur",
   fullName: "Sekalarupa Studio Arsitek",

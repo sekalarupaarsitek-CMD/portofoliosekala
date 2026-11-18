@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/*
+  DESIGN TOKENS (warna & font global)
+  Dipakai di kelas Tailwind, contoh: bg-paper, text-ink, border-line, font-sans.
+*/
+@theme {
+  --color-paper: #fafaf8; /* latar utama halaman (putih krem bersih) */
+  --color-sand: #f1eee9; /* latar selang-seling (krem hangat) */
+  --color-line: #e2ded8; /* garis tipis pembatas */
+  --color-stone: #6b6560; /* abu hangat untuk teks sekunder */
+  --color-ink: #111111; /* hitam untuk teks utama */
+  --color-accent: #8a7b6a; /* aksen taupe */
+}
+
+/* Font diambil dari next/font di layout.tsx */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Agar judul bagian tidak tertutup navbar saat diklik dari menu */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Animasi fade-in halus saat elemen masuk layar (lihat components/ui/Reveal.tsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animasi kartu portofolio saat filter kategori diganti */
+@keyframes portfolio-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Animasi loop 1 baris ke samping untuk Portofolio di Beranda */
+@keyframes portfolio-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.portfolio-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: portfolio-marquee var(--marquee-duration, 36s) linear infinite;
+  will-change: transform;
+}
+
+.portfolio-marquee-track:hover,
+.portfolio-marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  [class*="portfolio-fade"] {
+    animation: none !important;
+  }
+
+  .portfolio-marquee-track {
+    animation: none;
+  }
+}
